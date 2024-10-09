@@ -5,8 +5,9 @@ function form_validate()
 	let number=document.getElementById("number").value;
 	let password=document.getElementById("password").value;
 	let confirm_password=document.getElementById("confirm_password").value;
-	let date=document.getElementById("first_name").date;
+	let date=document.getElementById("date").value;
 
+	var name_check=/[^a-zA-Z0-9\s]/;
 	var email_match=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 	var password_match_space=/\s/;
 	var password_match_small_letter=/[a-z]/;	
@@ -17,6 +18,10 @@ function form_validate()
 	if(name.length==0)
 	{
 		document.getElementById("first_name_error").innerHTML = "Please enter your first name";
+	}
+	else if(name_check.test(name))
+	{
+		document.getElementById("first_name_error").innerHTML = "Name should not contain any special charector";	
 	}
 	else
 	{
@@ -99,4 +104,30 @@ function form_validate()
 		document.getElementById("confirm_password_error").innerHTML = "";
 	}
 
+	if(document.getElementById("male").checked || document.getElementById("female").checked)
+	{
+		document.getElementById("gender_error").innerHTML = "";
+	}
+	else
+	{
+		document.getElementById("gender_error").innerHTML = "Please select your gender";
+	}
+
+	if(date=="")
+	{
+		document.getElementById("date_error").innerHTML = "Please select your DOB";
+	}
+	else
+	{
+		document.getElementById("date_error").innerHTML = "";
+	}
+	if(document.getElementById("android").checked || document.getElementById("ios").checked || document.getElementById("other_device").checked)
+	{
+
+		document.getElementById("device_error").innerHTML = "";
+	}
+	else
+	{
+		document.getElementById("device_error").innerHTML = "Please select your device type";
+	}
 }
