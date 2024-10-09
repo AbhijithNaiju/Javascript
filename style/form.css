@@ -11,15 +11,20 @@ form
 }
 form>div
 {
-	margin:10px 0;
+	margin-top:10px;
+	display:flex;
 }	
 label
 {
 	width:20%;
 }
-input
+input.width_30
 {
 	width:30%;	
+}
+form>div>div
+{
+	width:30%;
 }
 button
 {

@@ -11,27 +11,55 @@
 		<form>
 			<div>
 				<label>First Name</label>
-				<input type="text" id="first_name" placeholder="" ">
+				<input type="text" id="first_name" placeholder=""  class="width_30">
 				<span id="first_name_error"></span>
 			</div>
 			<div>
 				<label>Email</label>
-				<input type="email" id="email" placeholder="">
+				<input type="email" id="email" placeholder="" class="width_30">
 				<span id="email_error"></span>
 			</div>
 			<div>
 				<label>Phone Number</label>
-				<input type="text" id="number" placeholder="">
+				<input type="text" id="number" placeholder="" class="width_30">
 				<span id="number_error"></span>
 			</div>
 			<div>
-				<label>Password</label>
-				<input type="password" id="password" placeholder="">
-				<span id="password_error"></span>
+				<label>Gender</label>
+				<div class="d-flex">
+					<input type="radio" name="gender" value="M" id="male">
+					<label class="width_unset">Male</label>
+					<input type="radio" name="gender" value="F" id="female">
+					<label class="width_unset">Female</label>
+				</div>
+				<span id="gender_error"></span>
 			</div>
 			<div>
+				<label>Device</label>
+				<div class="d-flex">
+					<input type="checkbox" name="" value="" id="android">
+					<label class="width_unset me-4">Android</label>
+					<input type="checkbox" name="" value="" id="ios">
+					<label class="width_unset">IOS</label>
+					<input type="checkbox" name="r" value="" id="other_device">
+					<label class="width_unset">Other</label>
+				</div>
+				<span id="device_error"></span>
+			</div>
+			<div>
+				<label>DOB</label>
+				<input type="date" id="date" placeholder="" class="width_30">
+				<span id="date_error"></span>
+			</div>
+			<div>
+				<label>Password</label>
+				<input type="password" id="password" placeholder="" class="width_30">
+				<span id="password_error"></span>
+			</div>
+			<small>*Password must be a combination of special charectors digits and lower case and uppercase letters</small>
+			<div>
 				<label>Confirm Password</label>
-				<input type="password" id="confirm_password" placeholder="">
+				<input type="password" id="confirm_password" placeholder="" class="width_30">
 				<span id="confirm_password_error"></span>
 			</div>
 			<button type="button" onclick="form_validate()">SUBMIT</button>
